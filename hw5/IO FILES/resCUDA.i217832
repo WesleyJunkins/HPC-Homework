@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: runCUDA.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw5
+  The memory limit is: 120gb
+  The job will start running after: 202412021340.03
+  Job Name: resCUDA
+  Queue: -q gpu
+  Constraints: 
+  Command typed:
+/scripts/run_gpu runCUDA.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N resCUDA -a 202412021340.03 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=120000mb 
+  Job number: 217832
+ 

@@ -1,0 +1,62 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: runCUDAtry.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw5/try
+  The working directory is:  /scratch-local/ualclsd0167.runCUDAtryshGPU.218779.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202412031504.54
+  Job Name: runCUDAtryshGPU
+  Queue: -q classgpu
+  Constraints: 
+  Using  1  cores on master node  asaxg002.asc.edu
+  Node list:  asaxg002.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu runCUDAtry.sh     
+  Queue submit command:
+qsub -q classgpu -j oe -N runCUDAtryshGPU -a 202412031504.54 -r n -M wcjunkins@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Tue Dec  3 15:04:57 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   25C    P0             48W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Compiling CUDA programs...
+Running CUDA programs...
+CUDA 5000x5000 3 tests
+File written successfully
+
+real	0m2.687s
+user	0m2.116s
+sys	0m0.486s
+------------------------------------------------------------------------------------------------------------------------
+CUDA 10000x10000 3 tests
+------------------------------------------------------------------------------------------------------------------------
+CUDA Improved 5000x5000 3 tests
+File written successfully
+
+real	0m2.792s
+user	0m2.296s
+sys	0m0.443s
+------------------------------------------------------------------------------------------------------------------------
+CUDA Improved 10000x10000 3 tests
+------------------------------------------------------------------------------------------------------------------------

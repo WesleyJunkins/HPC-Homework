@@ -1,0 +1,129 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: runCUDA.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw5
+  The working directory is:  /scratch-local/ualclsd0167.resCUDA.217832.asax-pbs1
+  The memory limit is: 120gb
+  The job will start running after: 202412021340.03
+  Job Name: resCUDA
+  Queue: -q gpu
+  Constraints: 
+  Using  1  cores on master node  asaxg001.asc.edu
+  Node list:  asaxg001.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu runCUDA.sh     
+  Queue submit command:
+qsub -q gpu -j oe -N resCUDA -a 202412021340.03 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=120000mb 
+ 
+Mon Dec  2 13:40:11 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 PCIe               On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   34C    P0             47W /  310W |       1MiB /  81559MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+This script runs the CUDA code 3 times to get an average time taken for both 5000x5000 and 10000x10000 grids. It also does the same for the improved versions.
+Another script runs the MPI code once for each grid size so that the output can be tested later.
+The outputs will be stored in the scratch folder, and this script will compare the outputs of all the versions to ensure they are the same.
+The CUDA code will be given 1 CPU and 1 GPU as well as 8gb of memory.
+The MPI code will be given 1 CPU and 8gb of memory (This counts as the single threaded CPU version for comparison).
+Compiling CUDA programs...
+Running CUDA programs...
+CUDA 5000x5000 3 tests
+File written successfully
+
+real	1m28.023s
+user	1m25.328s
+sys	0m2.629s
+File written successfully
+
+real	1m31.907s
+user	1m29.369s
+sys	0m2.469s
+File written successfully
+
+real	1m30.965s
+user	1m28.346s
+sys	0m2.580s
+------------------------------------------------------------------------------------------------------------------------
+CUDA 10000x10000 3 tests
+File written successfully
+
+real	5m55.925s
+user	5m47.147s
+sys	0m8.544s
+File written successfully
+
+real	6m4.953s
+user	5m55.900s
+sys	0m8.842s
+File written successfully
+
+real	5m52.933s
+user	5m44.097s
+sys	0m8.658s
+------------------------------------------------------------------------------------------------------------------------
+CUDA Improved 5000x5000 3 tests
+File written successfully
+
+real	1m35.338s
+user	1m32.111s
+sys	0m3.099s
+File written successfully
+
+real	1m31.296s
+user	1m28.020s
+sys	0m3.212s
+File written successfully
+
+real	1m37.083s
+user	1m33.795s
+sys	0m3.224s
+------------------------------------------------------------------------------------------------------------------------
+CUDA Improved 10000x10000 3 tests
+File written successfully
+
+real	6m7.876s
+user	5m56.073s
+sys	0m11.581s
+File written successfully
+
+real	5m56.816s
+user	5m45.119s
+sys	0m11.559s
+File written successfully
+
+real	6m20.508s
+user	6m8.808s
+sys	0m11.494s
+------------------------------------------------------------------------------------------------------------------------
+All tests complete. Comparing outputs...
+Outputs compared:
+      5000x5000 CUDA vs MPI
+      10000x10000 CUDA vs MPI
+      5000x5000 CUDA vs CUDA Improved
+      10000x10000 CUDA vs CUDA Improved
+
+
+
+\/   \/   \/ 
+/\   /\   /\ 
+If no output was shown above, then the outputs are the same and the CUDA code is correct!

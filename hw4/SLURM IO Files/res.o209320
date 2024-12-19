@@ -1,0 +1,257 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: lifeMPIscript.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw4
+  The working directory is:  /scratch-local/ualclsd0167.res.209320.asax-pbs1
+  The memory limit is: 64gb
+  The job will start running after: 202411131442.12
+  Job Name: res
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Using  20  cores on master node  asax020.asc.edu
+  Node list:  asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu
+  Cores:  20
+  Command typed:
+/scripts/run_script_mpi lifeMPIscript.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N res -a 202411131442.12 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=20:mpiprocs=1:mem=3200mb 
+ 
+Starting MPI Tests
+
+Compiling
+
+Running each test 3 times (first, the blocking code)
+
+--------------------
+1 Processor
+
+real	7m4.054s
+user	6m56.858s
+sys	0m0.341s
+
+real	7m4.579s
+user	6m57.551s
+sys	0m0.343s
+
+real	7m4.439s
+user	6m57.325s
+sys	0m0.365s
+--------------------
+
+--------------------
+2 Processos
+
+real	3m36.651s
+user	7m0.037s
+sys	0m0.576s
+
+real	3m36.910s
+user	7m0.480s
+sys	0m0.586s
+
+real	3m36.901s
+user	7m0.430s
+sys	0m0.583s
+--------------------
+
+--------------------
+4 Processos
+
+real	1m55.476s
+user	7m15.135s
+sys	0m1.027s
+
+real	1m55.521s
+user	7m14.689s
+sys	0m1.152s
+
+real	1m55.540s
+user	7m15.159s
+sys	0m1.024s
+--------------------
+
+--------------------
+8 Processos
+
+real	1m8.764s
+user	8m15.224s
+sys	0m2.372s
+
+real	1m8.760s
+user	8m15.136s
+sys	0m2.523s
+
+real	1m8.708s
+user	8m14.814s
+sys	0m2.409s
+--------------------
+
+--------------------
+10 Processos
+
+real	1m1.317s
+user	9m4.209s
+sys	0m3.441s
+
+real	1m1.279s
+user	9m3.312s
+sys	0m3.691s
+
+real	1m1.193s
+user	9m2.747s
+sys	0m3.589s
+--------------------
+
+--------------------
+16 Processos
+
+real	1m13.804s
+user	17m43.346s
+sys	0m9.516s
+
+real	1m14.901s
+user	18m1.041s
+sys	0m9.378s
+
+real	1m13.476s
+user	17m37.168s
+sys	0m9.810s
+--------------------
+
+--------------------
+20 Processos
+
+real	1m23.062s
+user	25m7.213s
+sys	0m15.162s
+
+real	1m22.862s
+user	25m3.114s
+sys	0m16.048s
+
+real	1m23.421s
+user	25m14.729s
+sys	0m15.520s
+--------------------
+
+
+Running the non-blocking code
+
+
+--------------------
+1 Processor
+
+real	7m1.838s
+user	6m54.388s
+sys	0m0.364s
+
+real	7m2.298s
+user	6m54.784s
+sys	0m0.380s
+
+real	7m1.951s
+user	6m54.423s
+sys	0m0.344s
+--------------------
+
+--------------------
+2 Processos
+
+real	3m35.533s
+user	6m57.572s
+sys	0m0.599s
+
+real	3m35.377s
+user	6m57.333s
+sys	0m0.600s
+
+real	3m35.622s
+user	6m57.789s
+sys	0m0.616s
+--------------------
+
+--------------------
+4 Processos
+
+real	1m52.739s
+user	7m4.202s
+sys	0m1.062s
+
+real	1m53.274s
+user	7m6.351s
+sys	0m1.061s
+
+real	1m52.738s
+user	7m4.091s
+sys	0m1.115s
+--------------------
+
+--------------------
+8 Processos
+
+real	1m1.023s
+user	7m13.686s
+sys	0m2.347s
+
+real	1m1.065s
+user	7m13.906s
+sys	0m2.331s
+
+real	1m1.075s
+user	7m13.894s
+sys	0m2.401s
+--------------------
+
+--------------------
+10 Processos
+
+real	0m51.132s
+user	7m22.075s
+sys	0m3.619s
+
+real	0m51.059s
+user	7m21.845s
+sys	0m3.480s
+
+real	0m51.117s
+user	7m21.957s
+sys	0m3.576s
+--------------------
+
+--------------------
+16 Processos
+
+real	0m55.822s
+user	12m55.380s
+sys	0m9.536s
+
+real	0m55.856s
+user	12m56.667s
+sys	0m9.849s
+
+real	0m55.937s
+user	12m57.969s
+sys	0m9.911s
+--------------------
+
+--------------------
+20 Processos
+
+real	1m0.501s
+user	17m37.667s
+sys	0m15.406s
+
+real	1m0.512s
+user	17m38.287s
+sys	0m15.267s
+
+real	1m0.512s
+user	17m38.403s
+sys	0m16.180s
+--------------------
+
+Finished MPI Tests

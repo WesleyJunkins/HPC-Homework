@@ -1,0 +1,18 @@
+ 
+============================================================
+=====     Queued job information at submit time        =====
+============================================================
+  The submitted file is: g++Script.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw3
+  The memory limit is: 64gb
+  The job will start running after: 202410152314.00
+  Job Name: g++Res
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Command typed:
+/scripts/run_script g++Script.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N g++Res -a 202410152314.00 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=20:mpiprocs=20:mem=64000mb 
+  Job number: 117098
+ 

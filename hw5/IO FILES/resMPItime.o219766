@@ -1,0 +1,31 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: runMPItime.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw5
+  The working directory is:  /scratch-local/ualclsd0167.resMPItime.219766.asax-pbs1
+  The memory limit is: 64gb
+  The job will start running after: 202412042220.03
+  Job Name: resMPItime
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Using  60  cores on master node  asax020.asc.edu
+  Node list:  asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu
+  Cores:  60
+  Command typed:
+/scripts/run_script runMPItime.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N resMPItime -a 202412042220.03 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=60:mpiprocs=60:mem=64000mb 
+MPI 5000x5000 1 test
+
+real	0m57.344s
+user	16m37.286s
+sys	0m12.338s
+MPI 10000x10000 1 test
+
+real	2m26.549s
+user	44m35.993s
+sys	0m26.918s

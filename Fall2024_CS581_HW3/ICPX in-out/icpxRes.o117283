@@ -1,0 +1,139 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: icpxScript.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0167/hw3
+  The working directory is:  /scratch-local/ualclsd0167.icpxRes.117283.asax-pbs1
+  The memory limit is: 64gb
+  The job will start running after: 202410161017.42
+  Job Name: icpxRes
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Using  20  cores on master node  asax020.asc.edu
+  Node list:  asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu asax020.asc.edu
+  Cores:  20
+  Command typed:
+/scripts/run_script icpxScript.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N icpxRes -a 202410161017.42 -r n -M wcjunkins@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=20:mpiprocs=20:mem=64000mb 
+ICPX Compiled
+Round 1
+--------------------------------
+1 Thread
+
+real	8m30.542s
+user	8m29.047s
+sys	0m0.144s
+2 Threads
+
+real	4m52.683s
+user	9m40.623s
+sys	0m1.913s
+4 Threads
+
+real	3m35.465s
+user	14m8.428s
+sys	0m7.399s
+8 Threads
+
+real	2m51.316s
+user	22m21.009s
+sys	0m16.239s
+10 Threads
+
+real	2m52.793s
+user	28m8.360s
+sys	0m21.901s
+16 Threads
+
+real	3m11.317s
+user	49m41.842s
+sys	0m46.188s
+20 Threads
+
+real	3m41.527s
+user	71m22.890s
+sys	1m12.676s
+--------------------------------
+ 
+Round 2
+--------------------------------
+1 Thread
+
+real	8m20.647s
+user	8m19.006s
+sys	0m0.137s
+2 Threads
+
+real	4m58.764s
+user	9m52.233s
+sys	0m2.196s
+4 Threads
+
+real	3m33.774s
+user	14m1.146s
+sys	0m7.553s
+8 Threads
+
+real	3m1.179s
+user	23m35.614s
+sys	0m20.549s
+10 Threads
+
+real	2m53.381s
+user	28m13.449s
+sys	0m22.243s
+16 Threads
+
+real	3m11.792s
+user	49m48.249s
+sys	0m47.177s
+20 Threads
+
+real	3m17.649s
+user	62m26.490s
+sys	1m4.534s
+--------------------------------
+ 
+Round 3
+--------------------------------
+1 Thread
+
+real	8m24.134s
+user	8m22.554s
+sys	0m0.151s
+2 Threads
+
+real	5m2.485s
+user	9m59.483s
+sys	0m2.174s
+4 Threads
+
+real	4m8.061s
+user	16m15.684s
+sys	0m10.035s
+8 Threads
+
+real	2m53.592s
+user	22m38.809s
+sys	0m16.781s
+10 Threads
+
+real	2m56.097s
+user	28m40.382s
+sys	0m22.786s
+16 Threads
+
+real	3m6.621s
+user	48m32.290s
+sys	0m43.139s
+20 Threads
+
+real	3m54.929s
+user	76m18.130s
+sys	1m18.474s
+--------------------------------
+ 
